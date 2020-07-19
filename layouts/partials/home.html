@@ -1,13 +1,18 @@
 <div class="container-fluid home" id="home">
   <div
     class="background container-fluid"
-    style="background-image: url('{{ if .Site.Params.background }}{{ .Site.Params.background }}{{ else }}/assets/images/default-background.jpg{{ end }}');"
+    {{ if .Site.Params.background.image }}
+    style="background-image: url('{{ .Site.Params.background.image }}');"
+    {{ end }}
+    {{ if .Site.Params.background.color }}
+    style="background-color: {{ .Site.Params.background.color }};"
+    {{ end }}
   ></div>
   <div class="container content text-center">
     <img src="{{ if .Site.Params.author.image }}{{ .Site.Params.author.image }}{{ else }}/assets/images/default-avatar.png{{ end }}"
       class="rounded-circle mx-auto d-block img-fluid"
     />
-    <h1 class="greeting">Hi, I am
+    <h1 class="greeting">안녕하세요,
       {{ if .Site.Params.author.nickname }}
         {{ .Site.Params.author.nickname }}
       {{ else if .Site.Params.author.name }}
@@ -15,6 +20,7 @@
       {{ else }}
         Jane Doe
       {{ end }}
+      입니다
     </h1>
     <div class="typing-carousel">
       <span id="ityped" class="ityped"></span>
