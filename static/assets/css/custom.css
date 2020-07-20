@@ -2,7 +2,7 @@
     background-color: #ffcb30;
 }
 
-.navbar-brand, #theme, h1.text-center, ul.navbar-nav .nav-item, footer, footer h5 {
+.navbar-brand, #theme, h1.text-center, ul.navbar-nav .nav-item, footer, footer h5, a.nav-link.smooth-scroll, a#blog-link.nav-link {
     font-family: 'DX시인과나', serif;
     font-weight: 600;
 }
